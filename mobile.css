@@ -1,345 +1,183 @@
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* ===== HEADER ===== */
-.header {
-  background-color: hsl(144, 35%, 31%);
-  color: white;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.header h1 {
-  font-size: 30px;
-  margin: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ===== INTRO ===== */
-.intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 40px;
-  min-height: 100vh;
-  gap: 60px;
-  background: #f8fdf9;
-  flex-wrap: wrap;
-}
-
-.profile-pic img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: rgba(0, 64, 0, 0.7) 0px 22px 70px 20px;
-}
-
-.intro-text {
-  text-align: left;
-  line-height: 1.1;
-  padding: 20px;
-}
-
-.line1 {
-  font-size: 38px;
-  color: #333;
-  font-weight: 500;
-}
-
-.line2 {
-  font-size: 52px;
-  font-weight: 600;
-  color: #222;
-}
-
-.line3 {
-  font-size: 36px;
-  color: #333;
-  margin-top: 15px;
-  font-weight: 500;
-}
-
-.line4 {
-  font-size: 44px;
-  font-weight: 700;
-  color: #336b49;
-  margin-top: 40px;
-  letter-spacing: 2px;
-  text-align: right;
-}
-
-/* ===== ABOUT ===== */
-#about {
-  background-color: #e6f4ec;
-  padding: 70px 20px;
-  text-align: center;
-}
-
-.about-container {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: rgba(0, 64, 0, 0.6) 0px 10px 40px 6px;
-}
-
-#about h2 {
-  color: #0a5b2e;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-}
-
-#about p {
-  color: #333;
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
-
-#about h3 {
-  margin-top: 30px;
-  font-weight: bold;
-  color: #145a32;
-}
-
-.quote {
-  font-style: italic;
-  color: #2e8b57;
-  margin-top: 10px;
-}
-
-/* ===== SKILLS ===== */
-#skills {
-  background-color: #f4f4f4;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#skills h2 {
-  color: #0a5b2e;
-  font-size: 2.2em;
-  margin-bottom: 50px;
-  letter-spacing: 2px;
-}
-
-.skills-layout {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.percent-row,
-.skill-row {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-
-.percent-row span,
-.skill-row span {
-  width: 18%;
-  text-align: center;
-}
-
-.percent-row span {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #006400;
-}
-
-.skill-row span {
-  font-size: 1.3em;
-  font-weight: 600;
-  color: #333;
-}
-
-/* ===== VOUCHES ===== */
-#vouches {
-  background-color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#vouches h2 {
-  font-size: 2.2rem;
-  color: #0a5b2e;
-  margin-bottom: 40px;
-  letter-spacing: 2px;
-}
-
-.vouch-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 25px;
-  padding: 10px;
-  scroll-behavior: smooth;
-}
-
-.vouch {
-  flex: 0 0 auto;
-  width: 280px;
-  height: 330px;
-  border-radius: 15px;
-  box-shadow: rgba(0, 64, 0, 0.3) 0px 10px 25px 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.vouch img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 15px;
-  background-color: #0a5b2e;
-}
-
-/* ===== GALLERY ===== */
-#gallery {
-  background-color: white;
-  padding: 80px 20px;
-}
-
-.gallery-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.gallery-title h2 {
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-align: center;
-  color: #0a5b2e;
-  font-size: 60px;
-}
-
-.gallery-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 250px;
-  gap: 15px;
-  width: 100%;
-  max-width: 900px;
-}
-
-.gallery-item {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.4s ease;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.05);
-}
-
-/* ===== THANK YOU ===== */
-#thankyou {
-  background: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.thank-container h1 {
-  color: #2f7f3f;
-  font-size: 70px;
-  margin: 10px 0;
-  font-weight: 800;
-}
-
-.subtitle {
-  color: #2f7f3f;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.contact-list p {
-  color: #2f7f3f;
-  margin: 6px;
-  font-size: 18px;
-}
-
-.contact-list a {
-  color: #2f7f3f;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-list a:hover {
-  text-decoration: underline;
-}
-
-/* ===== FOOTER ===== */
-.site-footer {
-  background: #336b49;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-icons a {
-  display: inline-flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #000;
-  color: #fff;
-  align-items: center;
-  justify-content: center;
-  margin: 0 8px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.footer-icons a:hover {
-  transform: translateY(-3px);
-}
-
-/* ===== MOBILE FIXES ===== */
 @media (max-width: 768px) {
+
+
+  body {
+    overflow-x: hidden;
+  }
+
   .header {
     flex-direction: column;
     text-align: center;
     padding: 20px;
   }
 
+  .header h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
   nav a {
-    margin: 8px;
+    font-size: 14px;
+    margin: 5px;
+  }
+
+
+  .intro {
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .profile-pic img {
+    width: 200px;
+    height: 200px;
+    box-shadow: rgba(0, 64, 0, 0.6) 0px 14px 40px 15px;
+  }
+
+  .intro-text {
+    padding: 0;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .line1 {
+    font-size: 28px;
+  }
+
+  .line2 {
+    font-size: 38px;
+  }
+
+  .line3 {
+    font-size: 28px;
+    margin-top: 15px;
+  }
+
+  .line4 {
+    font-size: 30px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  #about {
+    padding: 40px 15px;
+  }
+
+  .about-container {
+    padding: 20px;
+  }
+
+  #about h2 {
+    font-size: 26px;
+  }
+
+  #about p {
     font-size: 16px;
+  }
+
+  #skills {
+    padding: 60px 20px;
+  }
+
+  .percent-row,
+  .skill-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .percent-row span,
+  .skill-row span {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .gallery-title h2 {
+    font-size: 42px;
+    margin-top: 0;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .gallery-images > .gallery-item:nth-child(5) {
+    position: static;
+    top: auto;
+  }
+
+  /* Thank You Section */
+  .thank-container h1 {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 32px;
+  }
+
+  .contact-list p {
+    font-size: 18px;
+  }
+
+  /* Footer */
+  .site-footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 8px 10px;
+    font-size: 0.9rem;
   }
 
   .intro {
@@ -350,77 +188,121 @@ nav a:hover {
 
   .intro-text {
     padding: 0;
+    text-align: center;
+    line-height: 1.2;
   }
 
   .profile-pic img {
     width: 200px;
     height: 200px;
+    box-shadow: rgba(0, 64, 0, 0.6) 0px 10px 40px 10px;
+  }
+/
+  #skills {
+    padding: 60px 10px;
   }
 
-  .line1 {
-    font-size: 26px;
+  .skills-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
-  .line2 {
-    font-size: 32px;
-  }
-
-  .line3 {
-    font-size: 26px;
-  }
-
-  .line4 {
-    font-size: 30px;
-    text-align: center;
-  }
-
-  #about h2 {
-    font-size: 28px;
-  }
-
-  #about p {
-    font-size: 16px;
-  }
-
-  #skills h2 {
-    font-size: 28px;
+  .percent-row,
+  .skill-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
   }
 
   .percent-row span,
   .skill-row span {
-    width: 45%;
-    margin-bottom: 10px;
-    font-size: 16px;
+    width: auto;
+    text-align: center;
+    font-size: 1.1rem;
   }
 
-  #vouches h2 {
-    font-size: 28px;
+
+  .skills-layout {
+    position: relative;
   }
 
-  .vouch {
-    width: 220px;
-    height: 260px;
+  .percent-row span:nth-child(1)::after {
+    content: " - Python";
+  }
+  .percent-row span:nth-child(2)::after {
+    content: " - HTML";
+  }
+  .percent-row span:nth-child(3)::after {
+    content: " - CSS";
+  }
+  .percent-row span:nth-child(4)::after {
+    content: " - JavaScript";
+  }
+  .percent-row span:nth-child(5)::after {
+    content: " - Time Management";
   }
 
-  .gallery-title h2 {
-    font-size: 40px;
+
+  .skill-row {
+    display: none;
   }
+
+
+
+
+
 
   .thank-container h1 {
-    font-size: 48px;
+    font-size: 50px;
   }
 
   .subtitle {
-    font-size: 26px;
+    font-size: 30px;
   }
 
   .contact-list p {
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .site-footer {
+    flex-direction: column;
+    padding: 20px;
   }
 
   .footer-icons a {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     font-size: 16px;
   }
+}
+@media (max-width: 768px) {
+  .vouch-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 10px;
+    -webkit-overflow-scrolling: touch; /* for smooth scrolling on iPhones */
+  }
+
+  .vouch {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 300px;
+  }
+
+  /* Optional: Hide scrollbar for cleaner look */
+  .vouch-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
