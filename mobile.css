@@ -306,3 +306,45 @@ html, body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
+@media (max-width: 768px) {
+  #gallery .gallery-title h2 {
+    writing-mode:vertical-lr;
+    text-orientation: upright !important;
+    font-size: 32px !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+
+  #gallery .gallery-images {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: 180px !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  /* Assign each image a fixed position in the grid */
+  #gallery .gallery-item:nth-child(1) { grid-column: 1; grid-row: 1; }
+  #gallery .gallery-item:nth-child(2) { grid-column: 2; grid-row: 1; }
+  #gallery .gallery-item:nth-child(5) { grid-column: 3; grid-row: 1; }
+
+  #gallery .gallery-item:nth-child(3) { grid-column: 1 / span 3; grid-row: 2; }
+  #gallery .gallery-item:nth-child(4) { grid-column: 1 / span 3; grid-row: 3; }
+
+  /* Image styling */
+  #gallery .gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+
+  /* Container fix */
+  #gallery .gallery-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 20px !important;
+  }
+}
